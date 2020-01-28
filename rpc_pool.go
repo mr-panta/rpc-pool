@@ -3,9 +3,12 @@ package rpc_pool
 import (
 	"errors"
 	"log"
+	"net/rpc"
 	"sync"
 	"time"
 )
+
+var ErrShutdown = rpc.ErrShutdown
 
 const constTPC = "tcp"
 
